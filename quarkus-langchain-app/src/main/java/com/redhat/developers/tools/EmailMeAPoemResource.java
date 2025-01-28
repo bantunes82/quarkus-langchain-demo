@@ -20,4 +20,11 @@ public class EmailMeAPoemResource {
         return service.writeAPoem(topic, lines);
     }
 
+
+    @Path("quarkus-and-langchain4j")
+    @GET()
+    public String emailMeAPoem() {
+        return service.writeAPoem("Qarkus and LangChain4j", 4);
+    }
+
 }

@@ -18,4 +18,11 @@ public class PromptResource {
     public String prompt(@QueryParam("message") String message) {
         return assistant.chat(message);
     }
+
+    @Path("quarkus")
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String prompt() {
+        return assistant.chat("What is the advantage of Quarkus?");
+    }
 }
